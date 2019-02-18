@@ -1,0 +1,11 @@
+set datafile separator comma
+
+set ylabel 'snow depth (in)'
+set xlabel 'time of year (m)'
+set title 'Grand Canyon South Rim Snow Depth 1976-2019'
+
+pl\
+	'StationOneLoadable.dat' u ($5+$6/30.0):11 w l lt 5,\
+	'StationTwoLoadable.dat' u ($5+$6/30.0):11 w l ,\
+	'StationTwoLoadable.dat' u ($5+$6/30.0):($4== 2019 ? $11:1/0) w l lt -1 lw 3
+ 

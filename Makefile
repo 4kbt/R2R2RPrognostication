@@ -14,3 +14,8 @@ StationThree.dat: ThreeStations.dat
 	grep USC00023584 $< > $@
 	sed -i 's/"//g' $@
 
+StationOneLoadable.dat : StationOne.dat
+	sed 's/-/,/g' $< > $@
+
+StationTwoLoadable.dat : StationTwo.dat
+	sed 's/-/,/g' $< > $@
