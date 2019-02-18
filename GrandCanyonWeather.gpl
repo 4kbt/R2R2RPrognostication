@@ -1,0 +1,29 @@
+reset
+
+set datafile separator comma
+
+set xdata time
+set timefmt "%Y-%m-%d"
+
+set format x "%Y"
+
+set key noauto
+
+#pl 'AirportNoQuotes.dat' u 14 w d , '' u 12 w d, '' u 13 w d  
+
+#4 date
+#5 average wind
+#6 time of peak gust
+#7
+#8 precip 
+#9 
+#10 snow?
+#11 snow depth?
+#12 average temperature
+#13 high temperature
+#14 low temperature
+#pl 'AirportNoQuotes.dat' u 4:18
+
+
+pl 'StationOne.dat' u 4:9, 'StationTwo.dat' u 4:9, 'StationThree.dat' u 4:9
+ 
